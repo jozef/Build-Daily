@@ -3,7 +3,7 @@ package Build::Daily;
 use warnings;
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -94,7 +94,6 @@ sub new {
         die 'failed to get VERSION from '.$args{'dist_version_from'}
             if not defined $info;
         
-        delete $args{'dist_version_from'};
         $args{'dist_version'} = $info->{'version'}->{'original'};
     }
     if (defined $args{'dist_version'}) {
